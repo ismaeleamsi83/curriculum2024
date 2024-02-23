@@ -17,9 +17,57 @@ nav{
     position: sticky;
     box-shadow: 2px 2px 12px  rgba(0,0,0,0.1);
     font-weight: 500;
+    
     span:hover{
         color:#e9b20e;
         cursor: pointer;
+    }
+}
+
+section{
+    max-width: 1024px; 
+    margin: 6rem auto 0 auto;
+    .content-article-home{
+        display: flex;
+        .img-perfil{
+            max-width: 250px; 
+            border-radius: 50%;
+        }
+        .content-article-right{
+            margin-left: 2rem; 
+            color: rgb(50, 50, 50);
+            h3{
+                font-size: 3rem;
+            }
+            .desa{
+                font-size: 2rem; 
+                color:#e9b20e; 
+                margin-top: 0.5rem;
+            }
+            .especia{
+                margin-top: 1rem; 
+                font-size: 1.5rem;
+            }
+            .content-button{
+                margin-top: 1.5rem; 
+                display: flex; 
+                gap: 2rem;
+                button{
+                    border: 1px solid gainsboro; 
+                    background-color: #F1F9FA; 
+                    padding: 6px 16px; 
+                    border-radius: 1rem; 
+                    display: flex; 
+                    align-items: center; 
+                    gap: 0.5rem;
+                    font-size: 1.2rem;
+                    img{
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+        
     }
 }
 
@@ -27,5 +75,11 @@ nav{
     nav{
         font-size: 13px;
         padding: 0.5rem; 
+    }
+    .content-article-home{
+        flex-direction: column;
+        .img-perfil{
+            margin-left: 2rem;
+        }
     }
 }
