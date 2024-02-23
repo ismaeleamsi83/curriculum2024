@@ -30,7 +30,7 @@ section{
     .content-article-home{
         display: flex;
         .img-perfil{
-            max-width: 250px; 
+            max-width: 260px; 
             border-radius: 50%;
         }
         .content-article-right{
@@ -80,6 +80,9 @@ section{
         flex-direction: column;
         .img-perfil{
             margin-left: 2rem;
+        }
+        .content-article-right{
+            padding-right: 2rem;
         }
     }
 }
