@@ -40,11 +40,11 @@
     <div class="content-project">
       <div class="content-project-left">
         @defer (on viewport){
-        <img [src]="imgNowAstronomy" alt="Imagen home de la app astronomy">
+        <img id="imgNowAstronomy" [src]="imgNowAstronomy" alt="Imagen home de la app astronomy">
         } @placeholder {
           <strong>Loading...</strong>
         }
-        <img (click)="changeImage()" src="../assets/images/arrow-right.png" alt="Flecha derecha" style="position: absolute; width: 32px; right: 1rem; top:0; bottom: 0; margin: auto; opacity: 0.4;">
+        <img id="arrow-right" (click)="changeImage()" src="../assets/images/arrow-right.png" alt="Flecha derecha">
       </div>
       <div class="content-project-right">
         <h3>App Astronomy - Explore the Wonders of the Universe</h3>

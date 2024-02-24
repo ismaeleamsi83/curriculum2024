@@ -90,10 +90,49 @@ section{
         .content-project-left{
             width: 50%;
             position: relative;
+            overflow: hidden;
             img{
                 width: 100%; 
                 border-radius: 1rem;
             }
+            #arrow-right{
+                position: absolute; 
+                width: 32px; 
+                right: 1rem; 
+                top:0; 
+                bottom: 0; 
+                margin: auto; 
+                opacity: 0.4; 
+                cursor: pointer;
+            }
+            #arrow-right:hover{
+                opacity: 0.6;
+            }
+            #imgNowAstronomy{
+                animation: scaleAnimationBefore  0.8s forwards;
+            }
+            #imgNowAstronomy:hover{
+                animation: scaleAnimation  0.8s forwards;
+            }
+
+            @keyframes scaleAnimation {
+                0% {
+                    transform: translateY() scale(1); 
+                  }
+                  100% {
+                    transform: translateY(10px) scale(1.02);
+                  }
+            }
+            @keyframes scaleAnimationBefore {
+                0% {
+                    transform: translateY(10px) scale(1.02);
+                  }
+                  100% {
+                    transform: translateY() scale(1);
+                  }
+            }
+            
+            
         }
         .content-project-right{
             width: 50%; 
