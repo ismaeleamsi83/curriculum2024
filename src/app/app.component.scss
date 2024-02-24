@@ -4,6 +4,7 @@ header{
     padding: 0.5rem 0;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 nav{
@@ -104,6 +105,7 @@ section{
                 margin: auto; 
                 opacity: 0.4; 
                 cursor: pointer;
+                z-index: 1;
             }
             #arrow-right:hover{
                 opacity: 0.6;
@@ -170,6 +172,9 @@ section{
                     background-color: #F1F9FA; 
                     font-size: 1.2rem; 
                     border-radius: 1rem;
+                    display: flex;
+                    align-items: end;
+                    gap: 0.5rem;
                 }
             }
         }
@@ -225,6 +230,9 @@ section{
                 box-sizing: border-box;
                 width: 100%;
                 padding: 0 2rem;
+                #arrow-right{
+                    right: 3rem; 
+                }
             }
             .content-project-right{
                 width: 100%;

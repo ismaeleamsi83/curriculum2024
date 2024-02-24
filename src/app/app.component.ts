@@ -13,7 +13,8 @@ export class AppComponent implements OnInit{
 
   projectAstronomy: any = [
     "../assets/images/app-astronomy-home.webp",
-    "../assets/images/app-astronomy-asteroids.png"
+    "../assets/images/app-astronomy-asteroids.png",
+    "../assets/images/app-astronomy-patents.png"
   ];
   imgNowAstronomy: any;
   indexImg = 0;
