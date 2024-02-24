@@ -32,31 +32,44 @@
     </div>
   </article>
 
-  <article style="margin-top: 9rem;">
-    <h2 style="font-size: 2.5rem; display: flex; align-items: center; gap: 1rem">
-      <img src="../assets/images/programmer.png" alt="" style="height: 34px;">
-      <span>Protectos</span> 
+  <article class="projects" >
+    <h2>
+      <img src="../assets/images/programmer.png" alt="Icono de proyectos" >
+      <span>Proyectos</span> 
     </h2>
-    <div style="margin-top: 3rem; width: 100%; display: flex;">
-      <div style="width: 50%;">
-        <img src="../assets/images/app-astronomy-home.PNG" alt="Imagen home de la app astronomy" style="width: 100%; border-radius: 1rem;">
+    <div class="content-project">
+      <div class="content-project-left">
+        @defer (on viewport){
+        <img [src]="imgNowAstronomy" alt="Imagen home de la app astronomy">
+        } @placeholder {
+          <strong>Loading...</strong>
+        }
+        <img (click)="changeImage()" src="../assets/images/arrow-right.png" alt="Flecha derecha" style="position: absolute; width: 32px; right: 1rem; top:0; bottom: 0; margin: auto; opacity: 0.4;">
       </div>
-      <div style="width: 50%; padding: 0 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-        <h3 style="font-size: 1.5rem;">App Astronomy - Explore the Wonders of the Universe</h3>
-        <div style=" display: flex; flex-wrap: wrap; gap: 0.5rem; color: rgb(226, 226, 226);">
-          <span style="padding: 4px 1rem; background-color: #003159; border-radius: 1rem;">HTML5</span>
-          <span style="padding: 4px 1rem; background-color: #003159; border-radius: 1rem;">SCSS</span>
-          <span style="padding: 4px 1rem; background-color: #003159; border-radius: 1rem;">Angular 17</span>
-          <span style="padding: 4px 1rem; background-color: #003159; border-radius: 1rem;">API Nasa</span>
+      <div class="content-project-right">
+        <h3>App Astronomy - Explore the Wonders of the Universe</h3>
+        <div class="content-technologies">
+          <span>HTML5</span>
+          <span>SCSS</span>
+          <span>Angular 17</span>
+          <span>API Nasa</span>
         </div>
-        <p style="letter-spacing: 0.5px; text-wrap: pretty; font-size: 1.2rem;">Mi aplicación ofrece una ventana al universo, permitiendo a los usuarios explorar datos y recursos astronómicos proporcionados por la API de la NASA de manera interactiva y educativa.</p>
-        <p style="letter-spacing: 0.5px; text-wrap: pretty; font-size: 1.2rem;">
-          
+        <p>Mi aplicación ofrece una ventana al universo, permitiendo a los usuarios explorar datos y recursos astronómicos proporcionados por la API de la NASA de manera interactiva y educativa.</p>
+        <p>
+          He utilizado la librería <strong>RxJS</strong> para el manejo de observables, el modulo  <strong>HttpClientModule</strong> para
+          realizar las peticiones a la API de la Nasa mediante filtrado por fechas separado en un 
+          <strong>Servicio</strong> y la carga diferida mediante la directiva 
+          <strong>&#64;defer</strong>.
+
         </p>
-        <div style="margin-bottom: 6px;">
-          <button style="padding: 0.4rem 1rem; border: 1px solid gainsboro; background-color: #F1F9FA; font-size: 1.2rem; border-radius: 1rem;">Ver Aplicación</button>
+        <div class="content-button">
+          <button>Ver Aplicación</button>
         </div>
       </div>
     </div>
   </article>
 </section>
+
+
+<!-- <img [src]="imgNowAstronomy" alt="" style="width: 100px;">
+<button (click)="changeImage()">Next</button> -->

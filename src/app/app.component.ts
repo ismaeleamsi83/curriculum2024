@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +8,27 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portafolio';
+
+  projectAstronomy: any = [
+    "../assets/images/app-astronomy-home.webp",
+    "../assets/images/app-astronomy-asteroids.png"
+  ];
+  imgNowAstronomy: any;
+  indexImg = 0;
+
+  ngOnInit(): void {
+    this.imgNowAstronomy = this.projectAstronomy[this.indexImg];
+  }
+
+  changeImage(){
+    if(this.indexImg < this.projectAstronomy.length -1){
+      this.imgNowAstronomy = this.projectAstronomy[++this.indexImg];
+    }else{
+      this.imgNowAstronomy = this.projectAstronomy[this.indexImg = 0];
+    };
+  }
+
+
 }
