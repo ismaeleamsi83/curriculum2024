@@ -181,6 +181,28 @@ section{
     }
 }
 
+.projects{
+    .content-skills{
+        margin-top: 3rem; 
+        display: flex;
+        .content-skills-left, .content-skills-right{
+            width: 50%;
+            h3{
+                font-size: 1.4rem;
+            }
+            ul{
+                margin-left: 2rem; 
+                margin-top: 1rem; 
+                display: flex; 
+                flex-direction: column; 
+                gap: 0.5rem; 
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
 @media (max-width: 900px){
     .projects{
         .content-project{
@@ -241,6 +263,18 @@ section{
                 h3{
                     margin-top: 1rem;
                 }
+            }
+        }
+    }
+
+    .projects{
+        .content-skills{
+            flex-direction: column;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            gap: 2rem;
+            .content-skills-left, .content-skills-right{
+                width: 100%;
             }
         }
     }
