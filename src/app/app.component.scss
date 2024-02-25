@@ -195,8 +195,9 @@ section{
                 margin-top: 1rem; 
                 display: flex; 
                 flex-direction: column; 
-                gap: 0.5rem; 
+                gap: 0.8rem; 
                 font-size: 1.2rem;
+                list-style-image: url('../assets/images/checked.png');
             }
         }
     }
