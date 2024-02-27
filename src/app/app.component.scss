@@ -98,6 +98,20 @@ section{
                 width: 100%; 
                 border-radius: 1rem;
             }
+            #arrow-left{
+                position: absolute;
+                width: 32px; 
+                left: 1rem;
+                transform: rotate(180deg);
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: 0.1;
+                cursor: pointer;
+            }
+            #arrow-left:hover{
+                opacity: 0.6;
+            }
             #arrow-right{
                 position: absolute; 
                 width: 32px; 
@@ -105,36 +119,36 @@ section{
                 top:0; 
                 bottom: 0; 
                 margin: auto; 
-                opacity: 0.4; 
+                opacity: 0.1; 
                 cursor: pointer;
                 z-index: 1;
             }
             #arrow-right:hover{
                 opacity: 0.6;
             }
-            #imgNowAstronomy{
-                animation: scaleAnimationBefore  0.8s forwards;
-            }
-            #imgNowAstronomy:hover{
-                animation: scaleAnimation  0.8s forwards;
-            }
+            // #imgNowAstronomy{
+            //     animation: scaleAnimationBefore  0.8s forwards;
+            // }
+            // #imgNowAstronomy:hover{
+            //     animation: scaleAnimation  0.8s forwards;
+            // }
 
-            @keyframes scaleAnimation {
-                0% {
-                    transform: translateY() scale(1); 
-                  }
-                  100% {
-                    transform: translateY(10px) scale(1.02);
-                  }
-            }
-            @keyframes scaleAnimationBefore {
-                0% {
-                    transform: translateY(10px) scale(1.02);
-                  }
-                  100% {
-                    transform: translateY() scale(1);
-                  }
-            }
+            // @keyframes scaleAnimation {
+            //     0% {
+            //         transform: translateY() scale(1); 
+            //       }
+            //       100% {
+            //         transform: translateY(10px) scale(1.02);
+            //       }
+            // }
+            // @keyframes scaleAnimationBefore {
+            //     0% {
+            //         transform: translateY(10px) scale(1.02);
+            //       }
+            //       100% {
+            //         transform: translateY() scale(1);
+            //       }
+            // }
             
             
         }
@@ -324,6 +338,9 @@ section{
                 box-sizing: border-box;
                 width: 100%;
                 padding: 0 2rem;
+                #arrow-left{
+                    left: 3rem;
+                }
                 #arrow-right{
                     right: 3rem; 
                 }

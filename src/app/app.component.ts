@@ -23,12 +23,21 @@ export class AppComponent implements OnInit{
     this.imgNowAstronomy = this.projectAstronomy[this.indexImg];
   }
 
-  changeImage(){
-    if(this.indexImg < this.projectAstronomy.length -1){
-      this.imgNowAstronomy = this.projectAstronomy[++this.indexImg];
-    }else{
-      this.imgNowAstronomy = this.projectAstronomy[this.indexImg = 0];
-    };
+  changeImage(direction: string){
+    if (direction === "right"){
+      if(this.indexImg < this.projectAstronomy.length -1){
+        this.imgNowAstronomy = this.projectAstronomy[++this.indexImg];
+      }else{
+        this.imgNowAstronomy = this.projectAstronomy[this.indexImg = 0];
+      };
+    }
+    if (direction === "left"){
+      if(this.indexImg == 0){
+        this.imgNowAstronomy = this.projectAstronomy[this.indexImg = this.projectAstronomy.length -1];
+      }else{
+        this.imgNowAstronomy = this.projectAstronomy[--this.indexImg];
+      }
+    }
   }
 
 

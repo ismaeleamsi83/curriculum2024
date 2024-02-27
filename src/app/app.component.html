@@ -19,7 +19,9 @@
         <div class="content-button">
           <button>
             <img src="../assets/images/curriculum-vitae.png" alt="Curriculum de Ismael">
+           <a href="../assets/images/curriculum-isma-2024.pdf" download>
             Currículum
+           </a>
           </button>
           <button>
             <img src="../assets/images/linkedin.png" alt="Linkedin de Ismael">
@@ -44,7 +46,8 @@
         } @placeholder {
           <strong>Loading...</strong>
         }
-        <img id="arrow-right" (click)="changeImage()" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+        <img id="arrow-right" (click)="changeImage('right')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+        <img id="arrow-left" (click)="changeImage('left')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
       </div>
       <div class="content-project-right">
         <h3>App Astronomy - Explore the Wonders of the Universe</h3>
