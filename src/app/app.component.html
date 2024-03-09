@@ -73,6 +73,40 @@
         </div>
       </div>
     </div>
+
+    <div class="content-project">
+      <div class="content-project-left">
+        @defer (on viewport){
+        <img id="imgNowAstronomy" [src]="imgNowTelo" alt="Imagen home de la app astronomy">
+        } @placeholder {
+          <strong>Loading...</strong>
+        }
+        <img id="arrow-right" (click)="changeImageTelo('right')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+        <img id="arrow-left" (click)="changeImageTelo('left')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+      </div>
+      <div class="content-project-right">
+        <h3>App Telo - Organización colaborativa de proyectos.</h3>
+        <div class="content-technologies">
+          <span>HTML5</span>
+          <span>SCSS</span>
+          <span>Angular 17</span>
+        </div>
+        <p>Mi aplicación es una plataforma digital que permite la gestión y organización colaborativa de proyectos mediante tableros virtuales y tarjetas interactivas.</p>
+        <p>
+          He utilizado el modulo <strong>DragDropModule</strong> de <strong>Angular Material</strong>
+          para poder mover las tareas y listas de tareas de manera interactiva y ordenado.
+          He empleado el concepto <strong>CRUD(Create, Read, Update & Delete)</strong> 
+          y <strong>ngModel</strong> para mostrar y guardar los cambios en el formulario.
+
+        </p>
+        <div class="content-button">
+          <button>
+            <img src="../assets/images/view-app.png" alt="" style="height: 1.5rem;">
+            <span><a href="https://telo-isma-rey.web.app/" target="_blank">Ver Aplicación</a></span>
+          </button>
+        </div>
+      </div>
+    </div>
   </article>
 
 
@@ -160,6 +194,8 @@
         </p>
       </div>
     </div>
+
+    
     
     <article class="projects" id="sobremi">
       <h2>

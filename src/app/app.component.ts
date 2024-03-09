@@ -11,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit{
   title = 'portafolio';
 
+  // imagenes proyecto astronomia
   projectAstronomy: any = [
     "../assets/images/app-astronomy-home.webp",
     "../assets/images/app-astronomy-asteroids.png",
@@ -19,8 +20,19 @@ export class AppComponent implements OnInit{
   imgNowAstronomy: any;
   indexImg = 0;
 
+  // imagenes proyecto trelo
+  projectTelo: any = [
+    "../assets/images/app-telo-home.png",
+    "../assets/images/app-telo-drop.png",
+    "../assets/images/app-telo-tarea.png"
+  ];
+  imgNowTelo: any;
+  indexImgTelo = 0;
+
+
   ngOnInit(): void {
     this.imgNowAstronomy = this.projectAstronomy[this.indexImg];
+    this.imgNowTelo = this.projectTelo[this.indexImgTelo];
   }
 
   changeImage(direction: string){
@@ -36,6 +48,24 @@ export class AppComponent implements OnInit{
         this.imgNowAstronomy = this.projectAstronomy[this.indexImg = this.projectAstronomy.length -1];
       }else{
         this.imgNowAstronomy = this.projectAstronomy[--this.indexImg];
+      }
+    }
+  }
+
+
+  changeImageTelo(direction: string){
+    if (direction === "right"){
+      if(this.indexImgTelo < this.projectTelo.length -1){
+        this.imgNowTelo = this.projectTelo[++this.indexImgTelo];
+      }else{
+        this.imgNowTelo = this.projectTelo[this.indexImgTelo = 0];
+      };
+    }
+    if (direction === "left"){
+      if(this.indexImgTelo == 0){
+        this.imgNowTelo = this.projectTelo[this.indexImgTelo = this.projectTelo.length -1];
+      }else{
+        this.imgNowTelo = this.projectTelo[--this.indexImgTelo];
       }
     }
   }
