@@ -230,6 +230,9 @@ section{
                 list-style-image: url('../assets/images/checked.png');
             }
         }
+        .content-skills-right{
+            padding-left: 2rem;
+        }
     }
 }
 
@@ -378,6 +381,9 @@ section{
             gap: 2rem;
             .content-skills-left, .content-skills-right{
                 width: 100%;
+            }
+            .content-skills-right{
+                padding-left: 0;
             }
         }
     }
