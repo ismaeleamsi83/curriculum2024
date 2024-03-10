@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { delay, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'portafolio';
+
+  @ViewChild ('imgAnimation') imgAnimation!: ElementRef;
+  @ViewChild ('imgAnimation2') imgAnimation2!: ElementRef;
 
   // imagenes proyecto astronomia
   projectAstronomy: any = [
@@ -36,38 +40,61 @@ export class AppComponent implements OnInit{
   }
 
   changeImage(direction: string){
-    if (direction === "right"){
-      if(this.indexImg < this.projectAstronomy.length -1){
-        this.imgNowAstronomy = this.projectAstronomy[++this.indexImg];
-      }else{
-        this.imgNowAstronomy = this.projectAstronomy[this.indexImg = 0];
-      };
-    }
-    if (direction === "left"){
-      if(this.indexImg == 0){
-        this.imgNowAstronomy = this.projectAstronomy[this.indexImg = this.projectAstronomy.length -1];
-      }else{
-        this.imgNowAstronomy = this.projectAstronomy[--this.indexImg];
+    this.imgAnimation.nativeElement.classList.add('imgNowAstronomy');
+
+    setTimeout( () => {
+
+      if (direction === "right"){
+        if(this.indexImg < this.projectAstronomy.length -1){
+          this.imgNowAstronomy = this.projectAstronomy[++this.indexImg];
+        }else{
+          this.imgNowAstronomy = this.projectAstronomy[this.indexImg = 0];
+        };
       }
-    }
+      if (direction === "left"){
+        if(this.indexImg == 0){
+          this.imgNowAstronomy = this.projectAstronomy[this.indexImg = this.projectAstronomy.length -1];
+        }else{
+          this.imgNowAstronomy = this.projectAstronomy[--this.indexImg];
+        }
+      }
+
+
+    }, 500);
+
+    setTimeout( () => {
+
+      this.imgAnimation.nativeElement.classList.remove('imgNowAstronomy');
+
+    }, 1000);
+    
   }
 
 
   changeImageTelo(direction: string){
-    if (direction === "right"){
-      if(this.indexImgTelo < this.projectTelo.length -1){
-        this.imgNowTelo = this.projectTelo[++this.indexImgTelo];
-      }else{
-        this.imgNowTelo = this.projectTelo[this.indexImgTelo = 0];
-      };
-    }
-    if (direction === "left"){
-      if(this.indexImgTelo == 0){
-        this.imgNowTelo = this.projectTelo[this.indexImgTelo = this.projectTelo.length -1];
-      }else{
-        this.imgNowTelo = this.projectTelo[--this.indexImgTelo];
+
+    this.imgAnimation2.nativeElement.classList.add('imgNowAstronomy');
+
+    setTimeout( () => {
+      if (direction === "right"){
+        if(this.indexImgTelo < this.projectTelo.length -1){
+          this.imgNowTelo = this.projectTelo[++this.indexImgTelo];
+        }else{
+          this.imgNowTelo = this.projectTelo[this.indexImgTelo = 0];
+        };
       }
-    }
+      if (direction === "left"){
+        if(this.indexImgTelo == 0){
+          this.imgNowTelo = this.projectTelo[this.indexImgTelo = this.projectTelo.length -1];
+        }else{
+          this.imgNowTelo = this.projectTelo[--this.indexImgTelo];
+        }
+      }
+    } , 500);
+
+    setTimeout( () => {
+      this.imgAnimation2.nativeElement.classList.remove('imgNowAstronomy');
+    }, 1000);
   }
 
 

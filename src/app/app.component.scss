@@ -126,6 +126,8 @@ section{
             #arrow-right:hover{
                 opacity: 0.6;
             }
+
+            
             // #imgNowAstronomy{
             //     animation: scaleAnimationBefore  0.8s forwards;
             // }
@@ -196,6 +198,18 @@ section{
         }
     }
 }
+
+
+
+.imgNowAstronomy{
+    animation: animacion1  1s linear; 
+}
+@keyframes animacion1 {
+    0%   {opacity: 1;}
+    50%  {opacity: .1;}
+    100% {opacity: 1;}
+}
+
 
 .projects{
     .content-skills{

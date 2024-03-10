@@ -42,7 +42,7 @@
     <div class="content-project">
       <div class="content-project-left">
         @defer (on viewport){
-        <img id="imgNowAstronomy" [src]="imgNowAstronomy" alt="Imagen home de la app astronomy">
+        <img #imgAnimation  [src]="imgNowAstronomy" alt="Imagen home de la app astronomy">
         } @placeholder {
           <strong>Loading...</strong>
         }
@@ -77,7 +77,7 @@
     <div class="content-project">
       <div class="content-project-left">
         @defer (on viewport){
-        <img id="imgNowAstronomy" [src]="imgNowTelo" alt="Imagen home de la app astronomy">
+        <img #imgAnimation2 [src]="imgNowTelo" alt="Imagen home de la app astronomy">
         } @placeholder {
           <strong>Loading...</strong>
         }
