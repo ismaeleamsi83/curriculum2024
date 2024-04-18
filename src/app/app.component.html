@@ -107,6 +107,42 @@
         </div>
       </div>
     </div>
+
+    <div class="content-project">
+      <div class="content-project-left">
+        @defer (on viewport){
+        <img #imgAnimation3 [src]="imgNowPhone" alt="Imagen home de la app astronomy">
+        } @placeholder {
+          <strong>Loading...</strong>
+        }
+        <img id="arrow-right" (click)="changeImagePhone('right')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+        <img id="arrow-left" (click)="changeImagePhone('left')" src="../assets/images/arrow-right.png" alt="Flecha derecha">
+      </div>
+      <div class="content-project-right">
+        <h3>App PhoneHub - Tienda Virtual.</h3>
+        <div class="content-technologies">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>REACT 18.2</span>
+        </div>
+        <p>
+          Mi aplicación está desarrollada con React para la venta de teléfonos móviles. 
+        </p>
+        <p>  
+          He utilizado tecnologías como <strong>useState, useEffect, props y arrow functions</strong> 
+          para ofrecer una experiencia de compra fluida. Con <strong>localStorage</strong>, 
+          guardo los productos del usuario incluso después de recargar la página. 
+          La comunicación entre componentes la he realizado a través de <strong>props</strong>, 
+          asegurando una estructura modular y escalable.
+        </p>
+        <div class="content-button">
+          <button>
+            <img src="../assets/images/view-app.png" alt="" style="height: 1.5rem;">
+            <span><a href="https://phonehub-ismael-rey.netlify.app/" target="_blank">Ver Aplicación</a></span>
+          </button>
+        </div>
+      </div>
+    </div>
   </article>
 
 

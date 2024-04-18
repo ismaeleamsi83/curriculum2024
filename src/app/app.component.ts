@@ -14,10 +14,11 @@ export class AppComponent implements OnInit{
 
   @ViewChild ('imgAnimation') imgAnimation!: ElementRef;
   @ViewChild ('imgAnimation2') imgAnimation2!: ElementRef;
+  @ViewChild ('imgAnimation3') imgAnimation3!: ElementRef;
 
   // imagenes proyecto astronomia
   projectAstronomy: any = [
-    "../assets/images/app-astronomy-home.webp",
+    "../assets/images/app-astronomy-home.png",
     "../assets/images/app-astronomy-asteroids.png",
     "../assets/images/app-astronomy-patents.png"
   ];
@@ -33,10 +34,20 @@ export class AppComponent implements OnInit{
   imgNowTelo: any;
   indexImgTelo = 0;
 
+  // imagenes proyecto phonehub
+  projectPhone: any = [
+    "../assets/images/phonehub_1.png",
+    "../assets/images/phonehub_2.png",
+    "../assets/images/phonehub_3.png"
+  ];
+  imgNowPhone: any;
+  indexImgPhone = 0;
+
 
   ngOnInit(): void {
     this.imgNowAstronomy = this.projectAstronomy[this.indexImg];
     this.imgNowTelo = this.projectTelo[this.indexImgTelo];
+    this.imgNowPhone = this.projectPhone[this.indexImgPhone] ;
   }
 
   changeImage(direction: string){
@@ -94,6 +105,33 @@ export class AppComponent implements OnInit{
 
     setTimeout( () => {
       this.imgAnimation2.nativeElement.classList.remove('imgNowAstronomy');
+    }, 1000);
+  }
+
+
+  changeImagePhone(direction: string){
+
+    this.imgAnimation3.nativeElement.classList.add('imgNowPhone');
+
+    setTimeout( () => {
+      if (direction === "right"){
+        if(this.indexImgPhone < this.projectPhone.length -1){
+          this.imgNowPhone = this.projectPhone[++this.indexImgPhone];
+        }else{
+          this.imgNowPhone = this.projectPhone[this.indexImgPhone = 0];
+        };
+      }
+      if (direction === "left"){
+        if(this.indexImgPhone == 0){
+          this.imgNowPhone = this.projectPhone[this.indexImgPhone = this.projectPhone.length -1];
+        }else{
+          this.imgNowPhone = this.projectPhone[--this.indexImgPhone];
+        }
+      }
+    } , 500);
+
+    setTimeout( () => {
+      this.imgAnimation3.nativeElement.classList.remove('imgNowPhone');
     }, 1000);
   }
 
